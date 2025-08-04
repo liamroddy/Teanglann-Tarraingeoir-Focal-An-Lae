@@ -24,7 +24,7 @@ Focal an lae: iarmhairt; f. result, consequence; bain3 toradh, iarsma
 
 URL = "https://www.teanglann.ie/ga/"
 
-def fetch_and_process_data(url):
+def get_focal_an_lae(url):
     try:
         response = requests.get(url)
         response.raise_for_status() 
@@ -54,5 +54,5 @@ def fetch_and_process_data(url):
         return f"Error processing data: {str(e)}"
 
 if __name__ == "__main__":
-    result = fetch_and_process_data(URL)
+    result = get_focal_an_lae(URL)
     print(result)
